@@ -30,7 +30,20 @@ private String Grupo;
 	@Override
 	public void emitirSom() {
      
-		System.out.println("Miiiiiiiiiiii");
+		System.out.println(getNome() + " diz: Miiiiiiiiiiii");
+	}
+
+
+	@Override
+	public void Correr() {
+		
+	}
+
+
+	@Override
+	public void subirArvore() {
+		System.out.println(getNome()+ " está subindo nas arvores!");
+		
 	}
 	
 

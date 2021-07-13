@@ -13,9 +13,20 @@ public class AnimalTeste {
         Animal3 Preguica = new Animal3 ("Sid",3,"Xenarthra","Terrestre","Cinza","Medio","Grande");
         Preguica.imprimirInfo();
         
+        
+        System.out.println(" -----------------------------------------------------------------");
         Cachorro.emitirSom();
+        Cachorro.Correr();
+
+        System.out.println(" -----------------------------------------------------------------");
+
         Cavalo.emitirSom();
+        Cavalo.Correr();
+        
+        System.out.println(" -----------------------------------------------------------------");
+
         Preguica.emitirSom();
+        Preguica.subirArvore();
 	}
 
 }

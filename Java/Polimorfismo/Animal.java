@@ -10,6 +10,9 @@ public abstract class Animal {
 	private String Especie;
 	
 	abstract public void emitirSom();
+	abstract public void Correr();
+	abstract public void subirArvore();
+
 	
 	public Animal(String Nome, int Idade, String Especie, String Nincho, String Dono, String Cor, String Porte) {
 		super();

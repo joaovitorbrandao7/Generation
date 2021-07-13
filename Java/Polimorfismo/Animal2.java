@@ -39,7 +39,25 @@ private int TamFerradura;
 	@Override
 	public void emitirSom() {
 
-		System.out.println("Rinheennheennn");
+		System.out.println(getNome()+ " diz: Rinheennheennn");
+	}
+
+
+
+
+	@Override
+	public void Correr() {
+		System.out.println(getNome()+ " está correndo!");
+		
+	}
+
+
+
+
+	@Override
+	public void subirArvore() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

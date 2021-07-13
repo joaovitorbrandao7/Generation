@@ -30,8 +30,24 @@ public class Animal1 extends Animal{
 	@Override
 	public void emitirSom() {
 
-		System.out.println("diz: Au au");
+		System.out.println(getNome() + " diz: Au au");
 	}
+
+
+	@Override
+	public void Correr() {
+
+       System.out.println(getNome() + " está correndo");		
+	}
+
+
+	@Override
+	public void subirArvore() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 	
 	
 }
