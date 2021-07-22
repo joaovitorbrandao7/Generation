@@ -41,13 +41,13 @@ select * from tb_pizza where preco >= 45;
 select * from tb_pizza where preco >= 29 and preco <=60;
 select * from tb_pizza where nome like "%C%";
 
-SELECT * FROM tb_pizza p
-join tb_categoria c
-on p.id = c.id;
+SELECT tb_pizza.nome, tb_pizza.preco,tb_pizza.adicional, tb_pizza.tempero, tb_pizza.produtos, tb_categoria.tamanho, tb_categoria.tipo_massa
+from tb_pizza
+inner join tb_categoria on tb_categoria.id = tb_pizza.fk_categoria;
 
-SELECT * FROM tb_pizza p
-join tb_categoria c
-on p.id = c.id
-where c.tipo = "0";
+SELECT tb_pizza.nome, tb_pizza.preco, tb_categoria.tamanho, tb_categoria.tipo_massa
+from tb_pizza
+inner join tb_categoria on tb_categoria.id = tb_pizza.fk_categoria 
+where tb_categoria.tipo="Chocolate";
 
 

@@ -46,12 +46,13 @@ SELECT * FROM personagem WHERE defesa >= 1000 AND defesa <= 2000;
 
 SELECT * FROM personagem WHERE nome LIKE "%C%";
 
-SELECT * FROM personagem p
-join classe c
-on p.id = c.id;
+SELECT personagem.nome, personagem.regiao, personagem.tipo, personagem.cor_uniforme, personagem.ataque, personagem.defesa, classe.nome, classe.equipamento, classe.alcance
+from personagem
+inner join classe on classe.id = personagem.fk_classe;
 
-SELECT * FROM personagem p
-join classe c
-on p.id = c.id 
-where c.nome like "%Atirador%";	
+SELECT personagem.id, personagem.nome, classe.nome
+from personagem
+inner join classe on classe.id = personagem.fk_classe
+where classe.nome="Atirador";
+
 

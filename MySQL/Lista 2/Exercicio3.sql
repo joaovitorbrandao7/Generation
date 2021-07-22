@@ -42,11 +42,12 @@ SELECT * FROM tb_produto WHERE preco > 50;
 SELECT * FROM tb_produto WHERE preco > 3 and preco < 60;
 SELECT * FROM tb_produto WHERE nome like "%B%";
 
-SELECT * FROM tb_produto p
-Inner join tb_categoria c
-on p.id = c.id;
 
-SELECT * FROM tb_produto p
-Inner join tb_categoria c
-on p.id = c.id
-where c.tipo="Cosmético";
+SELECT tb_produto.id, tb_produto.nome, tb_produto.preco, tb_categoria.tipo
+from tb_produto
+inner join tb_categoria on tb_categoria.id = tb_produto.fk_categoria;
+
+SELECT tb_produto.nome, tb_categoria.tipo
+from tb_produto
+inner join tb_categoria on tb_categoria.id = tb_produto.fk_categoria 
+where tb_categoria.tipo="Anti-Depressivo";
